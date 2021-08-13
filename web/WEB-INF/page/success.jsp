@@ -11,6 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-操作成功！
+操作成功！<br>
+request:${requestScope.get("request")}
+session:${sessionScope.get("session")}
 </body>
 </html>

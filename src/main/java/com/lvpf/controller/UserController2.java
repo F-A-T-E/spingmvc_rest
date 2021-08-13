@@ -5,6 +5,10 @@ import com.lvpf.bean.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 /**
  * 乱码问题解决
  * 需要设置request和Response的编码方式，可以自己手动编写过滤器
@@ -20,8 +24,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController2 {
 
 	@RequestMapping("/testUser")
-	public String testUser(User user, Address address){
+	public String testUser(User user){
 		System.out.println(user.toString());
+		return "success";
+	}
+
+	@RequestMapping("/api")
+	public String servletAPI(HttpServletRequest request, HttpServletResponse response, HttpSession session){
+		request.setAttribute("request","request");
+		session.setAttribute("session","session");
 		return "success";
 	}
 }
