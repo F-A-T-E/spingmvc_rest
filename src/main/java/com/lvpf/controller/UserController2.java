@@ -29,6 +29,20 @@ public class UserController2 {
 		return "success";
 	}
 
+	/**
+	 * Controller中也支持原生Servlet的对象需要在参数中给出
+	 *
+	 * HttpServletRequest
+	 * HttpServletResponse
+	 * HttpSession
+	 * Locale：设置区域信息
+	 *
+	 * @param request
+	 * @param response
+	 * @param session
+	 * @return
+	 */
+
 	@RequestMapping("/api")
 	public String servletAPI(HttpServletRequest request, HttpServletResponse response, HttpSession session){
 		request.setAttribute("request","request");
