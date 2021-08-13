@@ -1,10 +1,8 @@
 package com.lvpf.controller;
 
-import com.lvpf.bean.Address;
 import com.lvpf.bean.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -35,7 +33,11 @@ public class UserController2 {
 	 * HttpServletRequest
 	 * HttpServletResponse
 	 * HttpSession
-	 * Locale：设置区域信息
+	 * Locale：设置区域信息  国际化
+	 * InputStream:
+	 * OutputStream:
+	 * Reader:
+	 * Writer:
 	 *
 	 * @param request
 	 * @param response
